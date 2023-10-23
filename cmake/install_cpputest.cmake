@@ -12,7 +12,7 @@ FetchContent_MakeAvailable(CppUTest)
 
 # link CppUTest to a target
 function(link_cpputest target)
-  target_link_libraries(target PRIVATE
+  target_link_libraries(${target} PRIVATE
     CppUTest::CppUTest
     CppUTest::CppUTestExt)
 endfunction()
@@ -20,7 +20,7 @@ endfunction()
 # add target to CTest's test suite
 function(add_cpputest target)
   include(CTest)
-  add_test(target target)
+  add_test(${target} ${target})
 endfunction()
 
 function(link_and_addtest_cpputest target)
