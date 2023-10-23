@@ -11,10 +11,12 @@ set(CMAKE_INSTALL_PREFIX
     ${CMAKE_SOURCE_DIR}/install
     CACHE PATH "..." FORCE)
 
+set(MY_SCRIPT_DIRECTORY ${CMAKE_SOURCE_DIR}/cmake)
+# install CppUTest
+include(${MY_SCRIPT_DIRECTORY}/install_cpputest.cmake)
+
 # create ctest configuration in current directory
 enable_testing()
-
-include(cmake/install_cpputest.cmake)
 
 add_subdirectory(src)
 add_subdirectory(test)

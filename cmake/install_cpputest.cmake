@@ -1,4 +1,5 @@
-# CppUTest
+# install CppUTest with FetchContent
+# refer: https://github.com/cpputest/cpputest#integration-as-external-cmake-project
 include(FetchContent)
 FetchContent_Declare(
     CppUTest
