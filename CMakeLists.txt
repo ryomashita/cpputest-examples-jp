@@ -14,5 +14,7 @@ set(CMAKE_INSTALL_PREFIX
 # create ctest configuration in current directory
 enable_testing()
 
+include(cmake/install_cpputest.cmake)
+
 add_subdirectory(src)
 add_subdirectory(test)
