@@ -1,1 +1,2 @@
 add_subdirectory(minimum)
+add_subdirectory(assertions)
