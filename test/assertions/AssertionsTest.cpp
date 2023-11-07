@@ -61,6 +61,7 @@ TEST(AssertionsTest, ENUMS_EQUAL_INT) {
     A = 0xffff'ffff'1234'5678,
     B = 0x1234'5678,
   };
+  CHECK_TRUE((uint64_t)MyEnum2::A == 0xffff'ffff'1234'5678ULL);
   ENUMS_EQUAL_INT(MyEnum2::A, MyEnum2::B);
 }
 TEST(AssertionsTest, ENUMS_EQUAL_TYPE) {
